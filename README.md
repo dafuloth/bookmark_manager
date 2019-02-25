@@ -13,5 +13,10 @@ I'd like to see a list of my bookmarks
 
 ```
 
+| Object         | Messages                           |  
+| -------------  | ----------------------------       |
+| `BookmarkManager`| `list()` - returns `list_of_bookmarks` |
+
+
 ![Domain Model: Show a list of bookmarks](basic_domain_model_1.svg)
 
