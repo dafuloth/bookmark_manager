@@ -6,7 +6,6 @@ feature 'Viewing bookmarks' do
 
   scenario 'bookmarks displayed' do
     visit '/bookmarks'
-
     expect(page).to have_content "http://www.makers.tech"
     expect(page).to have_content "http://www.github.com"
     expect(page).to have_content "http://www.youtube.com"

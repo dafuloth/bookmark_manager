@@ -1,6 +1,15 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/student/pairing/wk4/bookmark_manager/spec/bookmarks_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/student/pairing/wk4/bookmark_manager/spec/features/viewing_bookmarks_spec.rb": [
         1,
         1,
@@ -18,6 +27,6 @@
         null
       ]
     },
-    "timestamp": 1551108944
+    "timestamp": 1551110958
   }
 }
