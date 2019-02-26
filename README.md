@@ -20,3 +20,11 @@ I'd like to see a list of my bookmarks
 
 ![Domain Model: Show a list of bookmarks](basic_domain_model_1.svg)
 
+```sql
+
+CREATE DATABASE "bookmark_manager";
+
+\c bookmark_manager
+You are now connected to database "bookmark_manager" as user "student".
+
+```
