@@ -167,3 +167,12 @@ bookmark_manager=# SELECT * FROM bookmarks;
 psql bookmark_manager < ./db/migrations/02_populating_table_data.sql
 
 ```
+
+## Interacting with PostgreSQL from Ruby
+
+ TDD an update to the .all method of the Bookmark model, to do the following:  
+ - Use PG to connect to the PostgreSQL bookmark_manager database.  
+ - Retrieve all bookmark records from the bookmarks table.
+ - Extract the URLs from the database response.
+
+ 
