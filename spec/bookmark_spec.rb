@@ -8,6 +8,7 @@ describe Bookmark do
       expect(bookmarks).to include('http://www.makersacademy.com')
       expect(bookmarks).to include('http://www.google.com')
       expect(bookmarks).to include('http://www.destroyallsoftware.com')
+      expect(bookmarks).to include('http://www.davidisthebestcodereu.co.uk')
     end
   end
 end
