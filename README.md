@@ -9,7 +9,7 @@
 ```sh
 As a user
 So that I can see my bookmarks
-I'd like to see a list of my bookmarks
+I''d like to see a list of my bookmarks
 
 ```
 
@@ -35,9 +35,9 @@ student=# \l
                                     List of databases
        Name       |  Owner  | Encoding |   Collate   |    Ctype    |  Access privileges  
 ------------------+---------+----------+-------------+-------------+---------------------
- bookmark_manager | student | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
- postgres         | student | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
- student          | student | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ bookmark_manager | student | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ postgres         | student | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
+ student          | student | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
 
 ```
 
@@ -73,7 +73,7 @@ bookmark_manager=# \dt
 ```psql
 
 bookmark_manager=# SELECT * FROM bookmarks;
- id | url 
+ id | url
 ----+-----
 (0 rows)
 
@@ -86,7 +86,7 @@ bookmark_manager=# SELECT * FROM bookmarks;
 ```psql
 
 bookmark_manager=# SELECT * FROM bookmarks;
- id | url 
+ id | url
 ----+-----
 (0 rows)
 
@@ -147,7 +147,7 @@ bookmark_manager=# SELECT * FROM bookmarks;
 
 ```sql
 
-bookmark_manager=# UPDATE bookmarks 
+bookmark_manager=# UPDATE bookmarks
 bookmark_manager-# SET url='http://www.destroyallsoftware.com'
 bookmark_manager-# WHERE id=2;
 UPDATE 1
@@ -193,4 +193,14 @@ DELETE FROM bookmarks WHERE url='http://www.itv.co.uk';
 SELECT * FROM bookmarks WHERE id=7
 
 ```
+## Setup Test Database
 
+1.
+```sql
+CREATE DATABASE 'bookmark_manager_test'
+```
+2.
+```sql
+\c
+CREATE TABLE bookmarks (id SERIAL PRIMARY KEY, url VARCHAR(60));
+``` 
