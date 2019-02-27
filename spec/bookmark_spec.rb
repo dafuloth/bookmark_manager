@@ -11,4 +11,13 @@ describe Bookmark do
       expect(bookmarks).to include('http://www.davidisthebestcodereu.co.uk')
     end
   end
+
+  describe '.add_bookmark' do
+    it 'adds a bookmark' do
+      Bookmark.add_bookmark('www.twitch.tv')
+
+      expect(Bookmark.all).to include('www.twitch.tv')
+
+    end
+  end
 end
