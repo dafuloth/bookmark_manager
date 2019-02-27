@@ -175,4 +175,22 @@ psql bookmark_manager < ./db/migrations/02_populating_table_data.sql
  - Retrieve all bookmark records from the bookmarks table.
  - Extract the URLs from the database response.
 
- 
+ ## Upgrading your toolset
+
+```sql
+INSERT INTO bookmarks
+	VALUES (DEFAULT, 'http://www.apple.com');
+
+UPDATE
+	bookmarks
+SET
+	url = 'http://www.itv.co.uk'
+WHERE
+	url = 'http://www.bbc.co.uk';
+
+DELETE FROM bookmarks WHERE url='http://www.itv.co.uk';
+
+SELECT * FROM bookmarks WHERE id=7
+
+```
+
