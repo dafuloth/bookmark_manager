@@ -1,6 +1,13 @@
 require 'pg'
 
 class Bookmark
+  # attr_reader :id, :title, :url
+
+  # def initialize(id:, title:, url:)
+  #   @id = id
+  #   @title = title
+  #   @url = url
+  # end
 
   def self.connect_db
     if ENV['TEST_DB'] == 'test'
@@ -25,4 +32,10 @@ class Bookmark
 
     @db.exec("INSERT INTO bookmarks VALUES(DEFAULT, '#{url}', '#{title}')")
   end
+
+  # def self.delete_bookmark(url, title)
+  #   Bookmark.connect_db
+
+  #   @db.exec("DELETE FROM bookmarks WHERE url = '#{url}'")
+  # end
 end

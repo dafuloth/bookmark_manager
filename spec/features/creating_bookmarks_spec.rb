@@ -6,7 +6,7 @@ feature 'Add a bookmark' do
     click_button('Add Bookmark')
 
     fill_in('title', with: 'Chrono.gg')
-    fill_in('URL', with: 'https://www.chrono.gg')
+    fill_in('url', with: 'https://www.chrono.gg')
 
     click_button('Add')
 
