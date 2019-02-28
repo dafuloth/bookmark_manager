@@ -17,12 +17,12 @@ class Bookmark
     bookmarks_data = @db.exec('SELECT * FROM bookmarks;')
 
     # Use map so that an array is returned
-    bookmarks_data.map { |bookmark| bookmark['url'] }
+    bookmarks_data.map { |bookmark| {url: bookmark['url'], title:bookmark['title']} }
   end
 
-  def self.add_bookmark(url)
+  def self.add_bookmark(url, title)
     Bookmark.connect_db
 
-    @db.exec("INSERT INTO bookmarks VALUES(DEFAULT, '#{url}')")
+    @db.exec("INSERT INTO bookmarks VALUES(DEFAULT, '#{url}', '#{title}')")
   end
 end
