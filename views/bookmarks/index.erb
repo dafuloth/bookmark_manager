@@ -1,5 +1,23 @@
+<h3>Bookmark List</h3>
 <ul>
   <% @bookmarks.each do |bookmark| %>
-    <li><a href="<%= bookmark[:url] %>"><%= bookmark[:title] %></a</li>
+    <li><a href="<%= bookmark[:url] %>"><%= bookmark[:title] %></a> </li>
   <% end %>
 </ul>
+
+<h3>Delete a Bookmark</h3>
+
+
+<form action="" method="">
+
+  <select name="id">
+    <% @bookmarks.each do |bookmark| %>
+      <option value="<%= bookmark[:id] %>">
+        <%= bookmark[:title] %>
+      </option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Delete Bookmark" />
+</form>
+

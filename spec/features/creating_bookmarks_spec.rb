@@ -1,5 +1,4 @@
 feature 'Add a bookmark' do
-
   scenario 'add "https://www.chrono.gg" to my bookmarks' do
     visit '/'
 
